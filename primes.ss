@@ -24,13 +24,13 @@
 ;; controlling function to use the above methods
 (define primes (lambda (N) (sieve (buildList 2 N))))
 
-(define banana
+(define ktake
     (lambda (m lst)
         (if (= m 0)
             '()
-            (cons (car lst) (banana (- m 1) (cdr lst))))))
+            (cons (car lst) (ktake (- m 1) (cdr lst))))))
 
 (define stol
     (lambda (m)
         (let ((lst (primes (* m 20))))
-            (banana m lst))))
+            (ktake m lst))))
