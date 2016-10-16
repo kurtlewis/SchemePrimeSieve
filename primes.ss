@@ -6,7 +6,7 @@
                 (buildList$ (+ n 1))))))
 
 ;; code to filter out multiples of each number
-(define filte-out
+(define filter-out
     (lambda (num lst)
             (if (null? lst)
                 '()
